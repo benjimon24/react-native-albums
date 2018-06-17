@@ -1,12 +1,18 @@
-import React from "react";
-import { View, Image, Text, Linking } from "react-native";
-import Card from "./Card";
-import CardSection from "./CardSection";
-import Button from "./Button";
+import React from 'react';
+import { View, Image, Text, Linking } from 'react-native';
+import Card from './Card';
+import CardSection from './CardSection';
+import Button from './Button';
 
 const Album = ({ album }) => {
   const { title, artist, image, thumbnail_image, url } = album;
-  const { thumbnailStyle, headerContentStyle, thumbnailContainerStyle, headerTextStyle, imageStyle } = styles;
+  const {
+    thumbnailStyle,
+    headerContentStyle,
+    thumbnailContainerStyle,
+    headerTextStyle,
+    imageStyle
+  } = styles;
 
   return (
     <Card>
@@ -23,9 +29,7 @@ const Album = ({ album }) => {
         <Image style={imageStyle} source={{ uri: image }} />
       </CardSection>
       <CardSection>
-        <Button onPress={() => Linking.openURL(url)}>
-          Buy Now
-        </Button>
+        <Button onPress={() => Linking.openURL(url)}>Buy Now</Button>
       </CardSection>
     </Card>
   );
@@ -33,16 +37,16 @@ const Album = ({ album }) => {
 
 const styles = {
   headerContentStyle: {
-    flexDirection: "column",
-    justifyContent: "space-around"
+    flexDirection: 'column',
+    justifyContent: 'space-around'
   },
   thumbnailStyle: {
     height: 50,
     width: 50
   },
   thumbnailContainerStyle: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     marginLeft: 10,
     marginRight: 10
   },

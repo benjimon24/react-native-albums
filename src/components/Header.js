@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Header = (props) => {
+const Header = props => {
   const { textStyle, viewStyle } = styles;
   // this allows you to just use viewStyle instead of styles.viewStyle
   return (
     <View style={viewStyle}>
       <Text style={textStyle}>{props.headerText}</Text>
     </View>
-  )
+  );
 };
 
 const styles = {
@@ -19,7 +19,7 @@ const styles = {
     height: 60,
     paddingTop: 15,
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     elevation: 2,
     position: 'relative'
@@ -27,7 +27,6 @@ const styles = {
   textStyle: {
     fontSize: 20
   }
-
 };
 
 export default Header;

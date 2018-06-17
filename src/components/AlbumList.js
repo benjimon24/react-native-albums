@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, Text } from 'react-native';
 import axios from 'axios';
-import Album from './Album'
+import Album from './Album';
 
 class AlbumList extends Component {
   state = {
@@ -15,10 +15,12 @@ class AlbumList extends Component {
   }
 
   render() {
-    console.log(this.state.albums)
+    console.log(this.state.albums);
     return (
       <ScrollView>
-        {this.state.albums.map(album => <Album album={album} key={album.title} />)}
+        {this.state.albums.map(album => (
+          <Album album={album} key={album.title} />
+        ))}
       </ScrollView>
     );
   }
