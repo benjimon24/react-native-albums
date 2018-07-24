@@ -6,5 +6,9 @@ An introductory exercise into React Native, creating reusable components out of 
 1. React Native
 2. axios
 
+## Usage
+1. npm install
+2. react-native run-ios || react-native run-android (after setting up an Android emulator)
+
 ## Links
 * [The Complete React Native and Redux Course](https://www.udemy.com/the-complete-react-native-and-redux-course/) by Stephen Grider
